@@ -10,6 +10,7 @@ allprojects {
     }
 }
 
+
 bootJar {
     enabled = false
 }
