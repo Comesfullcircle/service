@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.delivery.api.common.error.ErrorCodeIfs;
-import org.delivery.api.common.error.UserErrorCode;
+
 
 @Data
 @NoArgsConstructor
@@ -25,7 +25,7 @@ public class Api<T> {
     }
 
     public static Api<Object> ERROR(Result result){
-        var api = new Api();
+        var api = new Api<Object>();
         api.result = result;
         return api;
     }
@@ -36,9 +36,15 @@ public class Api<T> {
         return api;
     }
 
-    public static Api<Object> ERROR(UserErrorCode errorCodeIfs, String description){
+    public static Api<Object> ERROR(ErrorCodeIfs errorCodeIfs, Throwable tx){
         var api = new Api<Object>();
-        api.result = Result.ERROR(errorCodeIfs, description);
+        api.result = Result.ERROR(errorCodeIfs, tx);
+        return api;
+    }
+
+    public static Api<Object> ERROR(ErrorCodeIfs errorCodeIfs, String description){
+        var api = new Api<Object>();
+        api.result = Result.ERROR(errorCodeIfs);
         return api;
     }
 }
