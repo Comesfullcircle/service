@@ -39,4 +39,9 @@ public class TokenBusiness {
                         () -> new ApiException(ErrorCode.NULL_POINT, "UserEntity is null")
                 );
     }
+
+    public Long validationAccessToken(String accessToken){
+        var userId = tokenService.validationToken(accessToken);
+        return userId;
+    }
 }

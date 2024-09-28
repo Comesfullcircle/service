@@ -19,8 +19,8 @@ public class TokenConverter {
     ){
         //Objects.requireNonNull(accessToken, ()->{throw new ApiException(ErrorCode.NULL_POINT);});
         //Objects.requireNonNull(refreshToken, ()->{throw new ApiException(ErrorCode.NULL_POINT);});
-        Objects.requireNonNull(accessToken, () -> {throw new ApiException(ErrorCode.NULL_POINT, new NullPointerException("AccessToken is null"));});
-        Objects.requireNonNull(refreshToken, () -> {throw new ApiException(ErrorCode.NULL_POINT, new NullPointerException("RefreshToken is null"));});
+        Objects.requireNonNull(accessToken, () -> {throw new ApiException(ErrorCode.NULL_POINT);});
+        Objects.requireNonNull(refreshToken, () -> {throw new ApiException(ErrorCode.NULL_POINT);});
 
 
         return TokenResponse.builder()
