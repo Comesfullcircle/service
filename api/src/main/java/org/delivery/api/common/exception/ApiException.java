@@ -1,6 +1,7 @@
 package org.delivery.api.common.exception;
 
 import lombok.Getter;
+import org.delivery.api.common.error.ErrorCode;
 import org.delivery.api.common.error.ErrorCodeIfs;
 
 @Getter
@@ -9,7 +10,7 @@ public class ApiException extends RuntimeException implements ApiExceptionIfs {
     private final ErrorCodeIfs errorCodeIfs;
     private final String errorDescription;
 
-    public ApiException(ErrorCodeIfs errorCodeIfs) {
+    public ApiException(ErrorCodeIfs errorCodeIfs, Exception e) {
         super(errorCodeIfs.getDescription());
         this.errorCodeIfs = errorCodeIfs;
         this.errorDescription = errorCodeIfs.getDescription();
@@ -26,6 +27,5 @@ public class ApiException extends RuntimeException implements ApiExceptionIfs {
         this.errorCodeIfs = errorCodeIfs;
         this.errorDescription = errorDescription;
     }
-
 
 }

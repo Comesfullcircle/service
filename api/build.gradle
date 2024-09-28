@@ -42,6 +42,11 @@ dependencies {
 
     // JAXB Runtime
     implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+
+    //Jwt
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
 }
 
 test {
