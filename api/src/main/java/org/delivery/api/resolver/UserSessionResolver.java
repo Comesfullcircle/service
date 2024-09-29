@@ -22,10 +22,11 @@ public class UserSessionResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
-        // 지원하는 파라미터 체크, 어노테이션 체크
+        // 지원하는 파라미터 체크 , 어노테이션 체크
 
         //1. 어노테이션이 있는지 체크
         var annotation = parameter.hasParameterAnnotation(UserSession.class);
+
         //2. 파라미터의 타입 체크
         var parameterType = parameter.getParameterType().equals(User.class);
 
@@ -34,16 +35,15 @@ public class UserSessionResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
-       // support parameter 에서 true 반환시 여기 실행
+        // support parameter 에서 true 반환시 여기 실행
 
-        // request context holder 에서 찾아오기
+        // request context holder에서 찾아오기
         var requestContext = RequestContextHolder.getRequestAttributes();
-        assert requestContext != null;
         var userId = requestContext.getAttribute("userId", RequestAttributes.SCOPE_REQUEST);
 
         var userEntity = userService.getUserWithThrow(Long.parseLong(userId.toString()));
 
-        //사용자 정보 셋팅
+        // 사용자 정보 셋팅
         return User.builder()
                 .id(userEntity.getId())
                 .name(userEntity.getName())
@@ -54,7 +54,7 @@ public class UserSessionResolver implements HandlerMethodArgumentResolver {
                 .registeredAt(userEntity.getRegisteredAt())
                 .unregisteredAt(userEntity.getUnregisteredAt())
                 .lastLoginAt(userEntity.getLastLoginAt())
+                .build()
                 ;
-
     }
 }

@@ -24,7 +24,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 
     private final TokenBusiness tokenBusiness;
 
-   /* @Override
+    @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("Authorization Interceptor url : {}", request.getRequestURI());
 
@@ -53,39 +53,5 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 
 
         throw new ApiException(ErrorCode.BAD_REQUEST, "인증실패");
-    }*/
-
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        log.info("Authorization Interceptor url : {}", request.getRequestURI());
-
-        if(HttpMethod.OPTIONS.matches(request.getMethod())){
-            return true;
-        }
-
-        if(handler instanceof ResourceHttpRequestHandler){
-            return true;
-        }
-
-        // 두 가지 헤더를 모두 확인
-        var authorizationHeader = request.getHeader("Authorization");
-        var accessToken = authorizationHeader != null && authorizationHeader.startsWith("Bearer ")
-                ? authorizationHeader.substring(7) // "Bearer " 제거
-                : request.getHeader("authorization-token");
-
-        if(accessToken == null){
-            throw new ApiException(TokenErrorCode.AUTHORIZATION_TOKEN_NOT_FOUND);
-        }
-
-        var userId = tokenBusiness.validationAccessToken(accessToken);
-
-        if(userId != null){
-            var requestContext = Objects.requireNonNull(RequestContextHolder.getRequestAttributes());
-            requestContext.setAttribute("userId", userId, RequestAttributes.SCOPE_REQUEST);
-            return true;
-        }
-
-        throw new ApiException(ErrorCode.BAD_REQUEST, "인증실패");
     }
-
 }

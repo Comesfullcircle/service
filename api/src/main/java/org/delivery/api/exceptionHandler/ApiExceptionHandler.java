@@ -16,7 +16,7 @@ public class ApiExceptionHandler {
 
     @ExceptionHandler(value = ApiException.class)
     public ResponseEntity<Api<Object>> apiException(
-           ApiException apiException
+            ApiException apiException
     ){
         log.error("", apiException);
 
