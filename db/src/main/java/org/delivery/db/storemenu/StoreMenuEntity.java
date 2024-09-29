@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 @SuperBuilder
 @Entity
 @Table(name = "store_menu")
@@ -39,4 +39,5 @@ public class StoreMenuEntity extends BaseEntity {
     private int likeCount;
 
     private int sequence;
+
 }
