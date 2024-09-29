@@ -16,7 +16,6 @@ public class StoreMenuConverter {
 
         return Optional.ofNullable(request)
                 .map(it ->{
-
                     return StoreMenuEntity.builder()
                             .storeId(request.getStoreId())
                             .name(request.getName())
@@ -33,6 +32,10 @@ public class StoreMenuConverter {
     public StoreMenuResponse toResponse(
             StoreMenuEntity storeMenuEntity
     ){
+        // 로그로 값 확인
+        System.out.println("StoreMenuEntity: " + storeMenuEntity);
+        System.out.println("storeId: " + storeMenuEntity.getStoreId());
+
         return Optional.ofNullable(storeMenuEntity)
                 .map(it ->{
                     return StoreMenuResponse.builder()

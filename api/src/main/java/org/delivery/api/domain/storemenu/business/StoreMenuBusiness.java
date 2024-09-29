@@ -18,15 +18,13 @@ public class StoreMenuBusiness {
     private final StoreMenuService storeMenuService;
     private final StoreMenuConverter storeMenuConverter;
 
-
     public StoreMenuResponse register(
             StoreMenuRegisterRequest request
     ){
         // req -> entity -> save -> response
         var entity = storeMenuConverter.toEntity(request);
         var newEntity = storeMenuService.register(entity);
-        var response = storeMenuConverter.toResponse(newEntity);
-        return response;
+        return storeMenuConverter.toResponse(newEntity);
     }
 
     public List<StoreMenuResponse> search(

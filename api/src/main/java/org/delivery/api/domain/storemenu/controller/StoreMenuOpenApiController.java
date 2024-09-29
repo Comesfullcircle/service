@@ -24,6 +24,11 @@ public class StoreMenuOpenApiController {
             @RequestBody Api<StoreMenuRegisterRequest> request
     ){
         var req = request.getBody();
+        System.out.println("storeId: " + req.getName());
+        System.out.println("storeId: " + req.getStoreId()); // 로그로 확인
+        if (req.getStoreId() == null) {
+            throw new IllegalArgumentException("storeId cannot be null");
+        }
         var response = storeMenuBusiness.register(req);
         return Api.OK(response);
     }
