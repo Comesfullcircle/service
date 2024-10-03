@@ -30,4 +30,5 @@ public class StoreUserService {
     public Optional<StoreUserEntity> getRegisterUser(String email) {
         return storeUserRepository.findFirstByEmailAndStatusOrderByIdDesc(email, StoreUserStatus.REGISTERED);
     }
+
 }
