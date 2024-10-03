@@ -41,10 +41,9 @@ public class StoreUserEntity extends BaseEntity {
     @Column(nullable = false)
     private LocalDateTime registeredAt;
 
-    @Column(nullable = false)
     private LocalDateTime unregisteredAt;
 
     @Column(nullable = false)
-    private LocalDateTime lastLoginAt;
+    private LocalDateTime lastLoginAt = LocalDateTime.now(); // 기본값 설정
 
 }
