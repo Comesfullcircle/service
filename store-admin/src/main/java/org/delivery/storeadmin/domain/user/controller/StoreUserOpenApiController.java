@@ -21,9 +21,8 @@ public class StoreUserOpenApiController {
     @PostMapping("")
     public StoreUserResponse register(
             @Valid
-            @RequestBody
-            StoreUserRegisterRequest request
-    ) {
+            @RequestBody StoreUserRegisterRequest request
+    ){
         var response = storeUserBusiness.register(request);
         return response;
     }

@@ -15,7 +15,9 @@ public class StoreUserBusiness {
 
     private final StoreUserConverter storeUserConverter;
     private final StoreUserService storeUserService;
-    private final StoreRepository storeRepository; //TODO SERVICE로 변경하기
+
+    private final StoreRepository storeRepository;  // TODO SERVICE 로 변경하기
+
 
     public StoreUserResponse register(
             StoreUserRegisterRequest request

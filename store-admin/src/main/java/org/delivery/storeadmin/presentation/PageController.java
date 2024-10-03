@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/api")
 public class PageController {
 
     @RequestMapping(path = {"","/main"})

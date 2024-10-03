@@ -30,9 +30,8 @@ public class Result {
         return Result.builder()
                 .resultCode(errorCodeIfs.getErrorCode())
                 .resultMessage(errorCodeIfs.getDescription())
-                .resultDescription("에러 발생")
-                .build()
-                ;
+                .resultDescription("에러발생")
+                .build();
     }
 
     public static Result ERROR(ErrorCodeIfs errorCodeIfs, Throwable tx){
@@ -40,16 +39,14 @@ public class Result {
                 .resultCode(errorCodeIfs.getErrorCode())
                 .resultMessage(errorCodeIfs.getDescription())
                 .resultDescription(tx.getLocalizedMessage())
-                .build()
-                ;
+                .build();
     }
 
-    public static Result ERROR(UserErrorCode errorCodeIfs, String description){
+    public static Result ERROR(ErrorCodeIfs errorCodeIfs, String description){
         return Result.builder()
                 .resultCode(errorCodeIfs.getErrorCode())
                 .resultMessage(errorCodeIfs.getDescription())
                 .resultDescription(description)
-                .build()
-                ;
+                .build();
     }
 }

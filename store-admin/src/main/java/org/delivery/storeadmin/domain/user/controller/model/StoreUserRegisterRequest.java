@@ -12,19 +12,15 @@ import org.delivery.db.storeuser.enums.StoreUserRole;
 @AllArgsConstructor
 public class StoreUserRegisterRequest {
 
-    @JsonProperty("storeName")
     @NotBlank
     private String storeName;
 
-    @JsonProperty("email")
     @NotBlank
     private String email;
 
-    @JsonProperty("password")
     @NotBlank
     private String password;
 
-    @JsonProperty("role")
     @NotBlank
     private StoreUserRole role;
 }

@@ -34,12 +34,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation group: 'org.springframework.security', name: 'spring-security-config', version: '6.3.1'
 
-    // thymeleaf 적용
+    //thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-
-    // https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity5
-    implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity5', version: '3.0.4.RELEASE'
-
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -47,12 +44,6 @@ dependencies {
 
     //스웨거 추가
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
-
-    // JAXB API
-    implementation 'javax.xml.bind:jaxb-api:2.3.1'
-
-    // JAXB Runtime
-    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
 
 }
 
