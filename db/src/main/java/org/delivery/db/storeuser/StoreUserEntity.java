@@ -38,12 +38,10 @@ public class StoreUserEntity extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private StoreUserRole role;
 
-    @Column(nullable = false)
     private LocalDateTime registeredAt;
 
     private LocalDateTime unregisteredAt;
 
-    @Column(nullable = false)
     private LocalDateTime lastLoginAt = LocalDateTime.now(); // 기본값 설정
 
 }

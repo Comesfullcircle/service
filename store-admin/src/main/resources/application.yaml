@@ -2,8 +2,12 @@ server:
   port: 8081
 
 spring:
+  thymeleaf:
+    prefix: classpath:/templates/ # 템플릿 파일 경로
+    suffix: .html # 파일 확장자
   application:
     name: store-admin
+
 
   jpa:
     show-sql: true
