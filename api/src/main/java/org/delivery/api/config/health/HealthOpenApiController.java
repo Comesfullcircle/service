@@ -18,6 +18,6 @@ public class HealthOpenApiController {
     @GetMapping("/health")
     public void health() {
         log.info("health call");
-        producer.producer("delivery.exchange","delivery.key","hello");
+       // producer.producer("delivery.exchange","delivery.key","hello");  //테스트 한거 실행되지 않도록 주석처리
     }
 }
