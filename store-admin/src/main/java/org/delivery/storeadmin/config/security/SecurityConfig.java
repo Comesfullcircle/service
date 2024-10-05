@@ -47,7 +47,9 @@ public class SecurityConfig {
                             .anyRequest().authenticated()
                     ;
                 })
-                .formLogin(Customizer.withDefaults())
+                //.formLogin(Customizer.withDefaults())
+                .formLogin()
+                    .defaultSuccessUrl("/main", true); // 로그인 성공 후 /main으로 이동
         ;
 
         return httpSecurity.build();
