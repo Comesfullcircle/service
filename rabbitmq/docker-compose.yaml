@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672" #rabbit amqp port
+      - "15672:15672" #manage port
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin #기본사용자 이름
+      - RABBITMQ_DEFAULT_PASS=admin123!@# #기본사용자 비밀번호
+
+
+/**
+  */
+
+#터미널에서 cd rabbitmq -> docker compose up-d -> 도커에서 rabbitmq 실행 중인지 확인
+# 도커에서 : -> open in terminal 클릭 후  rabbitmq-plugins enable rabbitmq_management 쳐서 실행
