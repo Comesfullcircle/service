@@ -3,15 +3,18 @@
 <head>
   <title>User Profile</title>
 </head>
-<body>
-<h1>User Profile</h1>
-<p>User ID: <span th:text="${userSession.userId}"></span></p>
-<p>Email: <span th:text="${userSession.email}"></span></p>
-<p>Status: <span th:text="${userSession.status}"></span></p>
-<p>Role: <span th:text="${userSession.role}"></span></p>
-<p>Registered At: <span th:text="${#dates.format(userSession.registeredAt, 'yyyy-MM-dd HH:mm:ss')}"></span></p>
-<p>Last Login At: <span th:text="${#dates.format(userSession.lastLoginAt, 'yyyy-MM-dd HH:mm:ss')}"></span></p>
-<p>Store ID: <span th:text="${userSession.storeId}"></span></p>
-<p>Store Name: <span th:text="${userSession.storeName}"></span></p>
-</body>
+  <body>
+        <h1>User Profile</h1>
+        <!-- User 정보 -->
+            <p>User ID: <span th:text="${userId}"></span></p>
+            <p>Email: <span th:text="${email}"></span></p>
+            <p>Status: <span th:text="${status}"></span></p>
+            <p>Role: <span th:text="${role}"></span></p>
+            <p>Registered At: <span th:text="${registeredAt}"></span></p>
+            <p>Unregistered At: <span th:text="${unregisteredAt}"></span></p>
+            <p>Last Login At: <span th:text="${lastLoginAt}"></span></p>
+            <!-- Store 정보 -->
+            <p>Store ID: <span th:text="${storeId}"></span></p>
+            <p>Store Name: <span th:text="${storeName}"></span></p>
+  </body>
 </html>
