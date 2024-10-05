@@ -15,31 +15,33 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("")
 public class PageController {
 
-    @GetMapping(path = {"", "/main"})
-    public String main(Model model) {
+    @RequestMapping(path = {"", "/main"})
+    public ModelAndView main() {
+        ModelAndView modelAndView = new ModelAndView("main");
         // SecurityContextHolder를 통해 Authentication 객체 가져오기
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null && authentication.getPrincipal() instanceof UserSession) {
             UserSession userSession = (UserSession) authentication.getPrincipal();
 
-            // 모델에 UserSession 필드 추가하여 Thymeleaf로 전달
-            model.addAttribute("userId", userSession.getUserId());
-            model.addAttribute("email", userSession.getEmail());
-            model.addAttribute("status", userSession.getStatus());
-            model.addAttribute("role", userSession.getRole());
-            model.addAttribute("registeredAt", userSession.getRegisteredAt());
-            model.addAttribute("unregisteredAt", userSession.getUnregisteredAt());
-            model.addAttribute("lastLoginAt", userSession.getLastLoginAt());
-            model.addAttribute("storeId", userSession.getStoreId());
-            model.addAttribute("storeName", userSession.getStoreName());
+            // ModelAndView에 UserSession 필드 추가
+            modelAndView.addObject("userId", userSession.getUserId());
+            modelAndView.addObject("email", userSession.getEmail());
+            modelAndView.addObject("status", userSession.getStatus());
+            modelAndView.addObject("role", userSession.getRole());
+            modelAndView.addObject("registeredAt", userSession.getRegisteredAt());
+            modelAndView.addObject("unregisteredAt", userSession.getUnregisteredAt());
+            modelAndView.addObject("lastLoginAt", userSession.getLastLoginAt());
+            modelAndView.addObject("storeId", userSession.getStoreId());
+            modelAndView.addObject("storeName", userSession.getStoreName());
 
             System.out.println("Authentication name: " + authentication.getName());
             System.out.println("Authorities: " + authentication.getAuthorities());
             System.out.println("Principal: " + userSession);
         }
 
-        return "main"; // "main.html" 템플릿 이름
+        return modelAndView; // ModelAndView를 반환하여 "main.html"로 이동
     }
+
 
 
     @RequestMapping("/order")
