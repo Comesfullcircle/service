@@ -2,36 +2,28 @@ package org.delivery.storeadmin.domain.user.converter;
 
 import lombok.RequiredArgsConstructor;
 import org.delivery.db.store.StoreEntity;
-import org.delivery.db.store.StoreRepository;
-import org.delivery.db.store.enums.StoreStatus;
 import org.delivery.db.storeuser.StoreUserEntity;
 import org.delivery.storeadmin.domain.authorization.model.UserSession;
 import org.delivery.storeadmin.domain.user.controller.model.StoreUserRegisterRequest;
 import org.delivery.storeadmin.domain.user.controller.model.StoreUserResponse;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
-
 @RequiredArgsConstructor
 @Service
 public class StoreUserConverter {
 
-    public StoreUserEntity toEntity(
-            StoreUserRegisterRequest request,
-            StoreEntity storeEntity
-    ){
+    // Request를 Entity로 변환
+    public StoreUserEntity toEntity(StoreUserRegisterRequest request, StoreEntity storeEntity) {
         return StoreUserEntity.builder()
                 .email(request.getEmail())
                 .password(request.getPassword())
                 .role(request.getRole())
-                .storeId(storeEntity.getId()) // TODO NULL 일때 에러 체크 확인 필요
+                .storeId(storeEntity.getId()) // TODO NULL 일 때 에러 체크 필요
                 .build();
     }
 
-    public StoreUserResponse toResponse(
-            StoreUserEntity storeUserEntity,
-            StoreEntity storeEntity
-    ){
+    // Entity를 Response로 변환
+    public StoreUserResponse toResponse(StoreUserEntity storeUserEntity, StoreEntity storeEntity) {
         return StoreUserResponse.builder()
                 .user(
                         StoreUserResponse.UserResponse.builder()
@@ -53,7 +45,8 @@ public class StoreUserConverter {
                 .build();
     }
 
-    public StoreUserResponse toResponse(UserSession userSession){
+    // UserSession을 Response로 변환
+    public StoreUserResponse toResponse(UserSession userSession) {
         return StoreUserResponse.builder()
                 .user(
                         StoreUserResponse.UserResponse.builder()

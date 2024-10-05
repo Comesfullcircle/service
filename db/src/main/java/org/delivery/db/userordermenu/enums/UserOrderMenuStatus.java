@@ -4,7 +4,7 @@ package org.delivery.db.userordermenu.enums;
 public enum UserOrderMenuStatus {
 
     REGISTERED("등록"),
-    UNREGISTERED("해지")
+    UNREGISTERED("해지"),
     ;
 
     UserOrderMenuStatus(String description) {

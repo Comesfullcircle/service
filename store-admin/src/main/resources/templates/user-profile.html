@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User Profile</title>
+</head>
+<body>
+<h1>User Profile</h1>
+<!-- User 정보 -->
+          <p>User ID: <span th:text="${storeUserResponse.user.id}"></span></p>
+          <p>Email: <span th:text="${storeUserResponse.user.email}"></span></p>
+          <p>Status: <span th:text="${storeUserResponse.user.status}"></span></p>
+          <p>Role: <span th:text="${storeUserResponse.user.role}"></span></p>
+          <p>Registered At: <span th:text="${storeUserResponse.user.registeredAt}"></span></p>
+          <p>Unregistered At: <span th:text="${storeUserResponse.user.unregisteredAt}"></span></p>
+          <p>Last Login At: <span th:text="${storeUserResponse.user.lastLoginAt}"></span></p>
+          <!-- Store 정보 -->
+          <p>Store ID: <span th:text="${storeUserResponse.store.id}"></span></p>
+          <p>Store Name: <span th:text="${storeUserResponse.store.name}"></span></p>
+</body>
+</html>

@@ -18,8 +18,8 @@ import java.time.LocalDateTime;
 @Builder
 public class StoreUserResponse {
 
-    public UserResponse user;
-    public StoreResponse store;
+    private UserResponse user;
+    private StoreResponse store;
 
     @Data
     @NoArgsConstructor
@@ -27,7 +27,6 @@ public class StoreUserResponse {
     @Builder
     public static class UserResponse{
         private Long id;
-
         private String email;
 
         private StoreUserStatus status;
@@ -46,9 +45,7 @@ public class StoreUserResponse {
     @AllArgsConstructor
     @Builder
     public static class StoreResponse{
-
         private Long id;
         private String name;
-
     }
 }

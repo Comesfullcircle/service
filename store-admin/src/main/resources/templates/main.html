@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <title>User Profile</title>
 </head>
 <body>
-<h1>MAIN PAGE</h1>
-
-<h1 th:text="${#authentication?.name}"></h1> </br>
-<h1 th:text="${#authentication?.principal?.storeName}"></h1> </br>
-<h1 th:text="${#authentication?.principal?.role}"></h1> </br>
-
+<h1>User Profile</h1>
+<p>User ID: <span th:text="${userSession.userId}"></span></p>
+<p>Email: <span th:text="${userSession.email}"></span></p>
+<p>Status: <span th:text="${userSession.status}"></span></p>
+<p>Role: <span th:text="${userSession.role}"></span></p>
+<p>Registered At: <span th:text="${#dates.format(userSession.registeredAt, 'yyyy-MM-dd HH:mm:ss')}"></span></p>
+<p>Last Login At: <span th:text="${#dates.format(userSession.lastLoginAt, 'yyyy-MM-dd HH:mm:ss')}"></span></p>
+<p>Store ID: <span th:text="${userSession.storeId}"></span></p>
+<p>Store Name: <span th:text="${userSession.storeName}"></span></p>
 </body>
 </html>

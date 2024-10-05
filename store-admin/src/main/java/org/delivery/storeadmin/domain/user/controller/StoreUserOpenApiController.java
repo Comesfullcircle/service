@@ -18,6 +18,7 @@ public class StoreUserOpenApiController {
 
     private final StoreUserBusiness storeUserBusiness;
 
+    // api꺼 가져오는건 exceptionhandler등 같이 가져와져서 가져오는거 비추
     @PostMapping("")
     public StoreUserResponse register(
             @Valid

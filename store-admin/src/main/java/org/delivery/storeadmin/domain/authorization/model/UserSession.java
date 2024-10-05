@@ -23,7 +23,7 @@ import java.util.List;
 @Builder
 public class UserSession implements UserDetails {
 
-    //user
+    // user
     private Long userId;
 
     private String email;
@@ -40,15 +40,10 @@ public class UserSession implements UserDetails {
 
     private LocalDateTime lastLoginAt;
 
-    //store
+    // store
     private Long storeId;
     private String storeName;
 
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return this.status == StoreUserStatus.REGISTERED;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -63,6 +58,11 @@ public class UserSession implements UserDetails {
     @Override
     public String getUsername() {
         return this.email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return this.status == StoreUserStatus.REGISTERED;
     }
 
     @Override

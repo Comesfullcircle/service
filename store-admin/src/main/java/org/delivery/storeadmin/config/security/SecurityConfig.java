@@ -14,9 +14,8 @@ import java.util.List;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
-
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity  // security  활성화
 public class SecurityConfig {
 
     private List<String> SWAGGER = List.of(
@@ -28,31 +27,36 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
-                .csrf(csrf -> csrf.disable()) // CSRF 비활성화
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(
-                                PathRequest.toStaticResources().atCommonLocations()
-                        ).permitAll() // 정적 리소스에 대한 모든 요청 허용
+                .csrf().disable()
+                .authorizeHttpRequests(it ->{
+                    it
+                            .requestMatchers(
+                                    PathRequest.toStaticResources().atCommonLocations()
+                            ).permitAll()   // resource 에 대해서는 모든 요청 허용
 
-                        // swagger 경로는 인증 없이 허용
-                        .requestMatchers(
-                                SWAGGER.toArray(new String[0])
-                        ).permitAll()
+                            // swagger 는 인증 없이 통과
+                            .requestMatchers(
+                                    SWAGGER.toArray(new String[0])
+                            ).permitAll()
 
-                        // open-api/** 경로에 대한 모든 요청을 인증 없이 허용
-                        .requestMatchers("/open-api/**").permitAll()
+                            // open-api / ** 하위 모든 주소는 인증 없이 통과
+                            .requestMatchers(
+                                    "/open-api/**"
+                            ).permitAll()
 
-                        // 그 외의 모든 요청은 인증 필요
-                        .anyRequest().authenticated()
-                )
-                .formLogin(withDefaults()); // 기본 폼 로그인 사용
+                            // 그 외 모든 요청은 인증 사용
+                            .anyRequest().authenticated()
+                    ;
+                })
+                .formLogin(Customizer.withDefaults())
+        ;
 
         return httpSecurity.build();
     }
 
     @Bean
     public PasswordEncoder passwordEncoder(){
-        // BCrypt를 사용하여 비밀번호 인코딩
+        // hash 로 암호화
         return new BCryptPasswordEncoder();
     }
 
