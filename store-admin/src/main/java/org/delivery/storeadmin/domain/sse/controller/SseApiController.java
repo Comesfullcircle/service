@@ -4,6 +4,8 @@ import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.delivery.storeadmin.domain.authorization.model.UserSession;
+import org.delivery.storeadmin.domain.sse.connection.SseConnectionPool;
+import org.delivery.storeadmin.domain.sse.connection.model.UserSseConnection;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,6 +43,8 @@ public class SseApiController {
      */
     private static final Map<String, SseEmitter> userConnection = new ConcurrentHashMap<>();
 
+    private final SseConnectionPool sseConnectionPool;
+
     @GetMapping(value = "/connect", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public ResponseBodyEmitter connect(
             @Parameter(hidden = true)
@@ -50,6 +54,12 @@ public class SseApiController {
 
         var emitter = new SseEmitter(1000L * 60); //ms 단위로 재연결 시킴
         userConnection.put(userSession.getUserId().toString(), emitter);
+
+        var temp = UserSseConnection.conect(
+                userSession.getStoreId().toString(),
+                sseConnectionPool
+        );
+
 
         emitter.onTimeout(()->{
             log.info("on timeout");
