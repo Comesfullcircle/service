@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>주문 관리</title>
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <style>
@@ -58,11 +58,10 @@
 </div>
 
 <script>
-    const app = Vue.createApp({
-        data() {
-            return {
-                orders: [] // 서버로부터 받은 주문 데이터를 저장할 배열
-            };
+    new Vue({
+        el: "#app",
+        data: {
+            orders: [] // 서버로부터 받은 주문 데이터를 저장할 배열
         },
         methods: {
             acceptOrder(order) {
@@ -74,28 +73,26 @@
             startDelivery(order) {
                 console.log("배달시작:", order);
             },
-            pushData(order) {
+            pushData(order){
                 this.orders.unshift(order);
             }
         },
         mounted() {
             // SSE 연결
-            const url = "http://localhost:8081/api/sse/connect";  // 접속 주소
-            const eventSource = new EventSource(url);             // SSE 연결
+            const url = "http://localhost:8081/api/sse/connect";    // 접속주소
+            const eventSource = new EventSource(url);               // sse 연결
 
             eventSource.onopen = event => {
-                console.log("SSE connection established");
-            };
+                console.log("sse connection")
+            }
 
             eventSource.onmessage = event => {
-                console.log("Received: " + event.data);
+                console.log("receive : "+event.data);
                 const data = JSON.parse(event.data);
                 this.pushData(data);
-            };
+            }
         }
     });
-
-    app.mount('#app');
 </script>
 </body>
 </html>
