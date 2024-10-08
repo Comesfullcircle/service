@@ -26,11 +26,11 @@ public class StoreUserApiController {
     ){
         // 인증 정보 가져오기
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication != null) {
+      /*  if (authentication != null) {
             System.out.println("Authentication name: " + authentication.getName());
             System.out.println("Authorities: " + authentication.getAuthorities());
             System.out.println("Principal: " + authentication.getPrincipal());
-        }
+        }*/
 
         // 기존 userSession 로그
         System.out.println("UserSession: " + userSession);

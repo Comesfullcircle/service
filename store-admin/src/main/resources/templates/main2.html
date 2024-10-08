@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+<h1>MAIN PAGE</h1>
+<!-- User 정보 -->
+<!--p>User ID: <span th:text="${userId}"></span></p>
+<p>Email: <span th:text="${email}"></span></p>
+<p>Status: <span th:text="${status}"></span></p>
+<p>Role: <span th:text="${role}"></span></p>
+<p>Registered At: <span th:text="${registeredAt}"></span></p>
+<p>Unregistered At: <span th:text="${unregisteredAt}"></span></p>
+<p>Last Login At: <span th:text="${lastLoginAt}"></span></p>
+<Store 정보>
+<p>Store ID: <span th:text="${storeId}"></span></p>
+<p>Store Name: <span th:text="${storeName}"></span></p-->
+</body>
+<script>
+    const url = "http://localhost:8081/api/sse/connect";  //접속주소
+    const eventSource = new EventSource(url);             // sse 연결
+
+    eventSource.onopen = event => {
+        console.log("sse connection");
+        console.log(event);
+    }
+
+    eventSource.onmessage = event => {
+        console.log("receive data : "+event.data);
+    }
+</script>
+</html>

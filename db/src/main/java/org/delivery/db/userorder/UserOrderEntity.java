@@ -15,14 +15,14 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 @SuperBuilder
 @Entity
 @Table(name = "user_order")
 public class UserOrderEntity extends BaseEntity {
 
     @Column(nullable = false)
-    private Long userId; // user table 1:n
+    private Long userId;    // user table 1:n
 
     @Column(nullable = false)
     private Long storeId;
@@ -43,4 +43,5 @@ public class UserOrderEntity extends BaseEntity {
     private LocalDateTime deliveryStartedAt;
 
     private LocalDateTime receivedAt;
+
 }

@@ -20,8 +20,5 @@ public class UserOrderConverter {
                 .deliveryStartedAt(userOrderEntity.getDeliveryStartedAt())
                 .receivedAt(userOrderEntity.getReceivedAt())
                 .build();
-
     }
-
-
 }
