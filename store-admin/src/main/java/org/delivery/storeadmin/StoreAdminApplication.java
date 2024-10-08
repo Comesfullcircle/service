@@ -10,7 +10,7 @@ public class StoreAdminApplication {
         SpringApplication.run(StoreAdminApplication.class, args);
     }
 
-    /**
+    /*
      * Spring Security
      * : 스프링 기반의 어플리케이션 에서의 인증과 권한부여를 구현해둔 보안 프레임워크
      *
