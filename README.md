@@ -54,7 +54,7 @@
 | **메시징** | RabbitMQ |
 | **CI/CD** | Docker, GitHub Actions |
 | **API 문서화** | Swagger (SpringDoc) |
-| **프론트엔드 ** | Vue.js |
+| **프론트엔드** | Vue.js |
 
 ---
 
