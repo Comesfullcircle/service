@@ -45,5 +45,6 @@ bin/
 .DS_Store
 
 # 모든 모듈의 application.yaml, docker-compose.yaml 제외
-**/application.yaml
+*/application.yaml
+
 **/docker-compose.yaml
