@@ -52,9 +52,9 @@
 | **백엔드** | Java 17, Spring Boot 3, Spring Security, JPA (Hibernate), RabbitMQ |
 | **데이터베이스** | MySQL 8, Redis (세션 관리) |
 | **메시징** | RabbitMQ |
-| **CI/CD** | Docker, GitHub Actions, Naver Cloud, AWS |
+| **CI/CD** | Docker, GitHub Actions |
 | **API 문서화** | Swagger (SpringDoc) |
-| **프론트엔드 (옵션)** | Vue.js |
+| **프론트엔드 ** | Vue.js |
 
 ---
 
