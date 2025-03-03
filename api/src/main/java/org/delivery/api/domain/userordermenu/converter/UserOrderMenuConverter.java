@@ -9,13 +9,14 @@ import org.delivery.db.userordermenu.UserOrderMenuEntity;
 public class UserOrderMenuConverter {
 
     public UserOrderMenuEntity toEntity(
-            UserOrderEntity userOrderEntity,
-            StoreMenuEntity storeMenuEntity
+        UserOrderEntity userOrderEntity,
+        StoreMenuEntity storeMenuEntity
     ){
         return UserOrderMenuEntity.builder()
-                .userOrderId(userOrderEntity.getUserId())
-                .storeMenuId(storeMenuEntity.getId())
-                .build()
-                ;
+            .userOrderId(userOrderEntity.getId())
+            .storeMenuId(storeMenuEntity.getId())
+            .build()
+            ;
     }
+
 }

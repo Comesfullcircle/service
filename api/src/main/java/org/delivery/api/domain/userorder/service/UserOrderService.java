@@ -19,19 +19,19 @@ public class UserOrderService {
     private final UserOrderRepository userOrderRepository;
 
     public UserOrderEntity getUserOrderWithOutStatusWithThrow(
-            Long id,
-            Long userId
+        Long id,
+        Long userId
     ){
         return userOrderRepository.findAllByIdAndUserId(id, userId)
-                .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
+            .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
     }
 
     public UserOrderEntity getUserOrderWithThrow(
-            Long id,
-            Long userId
+        Long id,
+        Long userId
     ){
         return userOrderRepository.findAllByIdAndStatusAndUserId(id, UserOrderStatus.REGISTERED, userId)
-                .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
+            .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
     }
 
     public List<UserOrderEntity> getUserOrderList(Long userId){
@@ -45,43 +45,43 @@ public class UserOrderService {
     // 현재 진행중인 내역
     public List<UserOrderEntity> current(Long userId){
         return getUserOrderList(
-                userId,
-                List.of(
-                        UserOrderStatus.ORDER,
-                        UserOrderStatus.COOKING,
-                        UserOrderStatus.DELIVERY,
-                        UserOrderStatus.ACCEPT
-                )
+            userId,
+            List.of(
+                UserOrderStatus.ORDER,
+                UserOrderStatus.COOKING,
+                UserOrderStatus.DELIVERY,
+                UserOrderStatus.ACCEPT
+            )
         );
     }
 
-    //과거 주문한 내역
+
+    // 과거 주문한 내역
     public List<UserOrderEntity> history(Long userId){
         return getUserOrderList(
-                userId,
-                List.of(
-                        UserOrderStatus.RECEIVE
-                )
+            userId,
+            List.of(
+                UserOrderStatus.RECEIVE
+            )
         );
     }
 
-    // 주문(create)
+
+    // 주문 (create)
     public UserOrderEntity order(
         UserOrderEntity userOrderEntity
     ){
         return Optional.ofNullable(userOrderEntity)
-                .map(it ->{
-                    it.setStatus(UserOrderStatus.ORDER);
-                    it.setOrderedAt(LocalDateTime.now());
-                    return userOrderRepository.save(it);
-                }).orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
+            .map(it ->{
+                it.setStatus(UserOrderStatus.ORDER);
+                it.setOrderedAt(LocalDateTime.now());
+                return userOrderRepository.save(it);
+            })
+            .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
     }
 
     // 상태 변경
-    public UserOrderEntity setStatus(
-            UserOrderEntity userOrderEntity,
-            UserOrderStatus status
-    ){
+    public UserOrderEntity setStatus(UserOrderEntity userOrderEntity, UserOrderStatus status){
         userOrderEntity.setStatus(status);
         return userOrderRepository.save(userOrderEntity);
     }
@@ -98,6 +98,7 @@ public class UserOrderService {
         return setStatus(userOrderEntity, UserOrderStatus.COOKING);
     }
 
+
     // 배달 시작
     public UserOrderEntity delivery(UserOrderEntity userOrderEntity){
         userOrderEntity.setDeliveryStartedAt(LocalDateTime.now());
@@ -109,5 +110,4 @@ public class UserOrderService {
         userOrderEntity.setReceivedAt(LocalDateTime.now());
         return setStatus(userOrderEntity, UserOrderStatus.RECEIVE);
     }
-
 }

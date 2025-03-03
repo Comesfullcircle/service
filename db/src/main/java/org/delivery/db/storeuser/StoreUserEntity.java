@@ -1,5 +1,6 @@
 package org.delivery.db.storeuser;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,22 +8,25 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.delivery.db.BaseEntity;
+import org.delivery.db.store.StoreEntity;
 import org.delivery.db.storeuser.enums.StoreUserRole;
 import org.delivery.db.storeuser.enums.StoreUserStatus;
 
 import java.time.LocalDateTime;
 
+
+@Entity
+@Table(name = "store_user")
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "store_user")
 public class StoreUserEntity extends BaseEntity {
 
-    @Column(nullable = false)
-    private Long storeId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "store_id", nullable = false)
+    private StoreEntity store; // 기존 storeId 대신 StoreEntity 참조
 
     @Column(length = 100, nullable = false)
     private String email;
@@ -39,9 +43,6 @@ public class StoreUserEntity extends BaseEntity {
     private StoreUserRole role;
 
     private LocalDateTime registeredAt;
-
     private LocalDateTime unregisteredAt;
-
-    private LocalDateTime lastLoginAt; // 기본값 설정
-
+    private LocalDateTime lastLoginAt;
 }

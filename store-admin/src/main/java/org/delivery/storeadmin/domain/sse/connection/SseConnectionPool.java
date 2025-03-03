@@ -10,8 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 @Component
-public class SseConnectionPool implements ConnectionPoolIfs<String, UserSseConnection> {
-
+public class SseConnectionPool implements ConnectionPoolIfs<String,UserSseConnection> {
     private static final Map<String, UserSseConnection> connectionPool = new ConcurrentHashMap<>();
 
     @Override
@@ -20,13 +19,13 @@ public class SseConnectionPool implements ConnectionPoolIfs<String, UserSseConne
     }
 
     @Override
-    public void onCompletionCallback(UserSseConnection session) {
-        log.info("call back connection pool completion : {}", session);
-        connectionPool.remove(session.getUniqueKey());
+    public UserSseConnection getSession(String uniqueKey) {
+        return connectionPool.get(uniqueKey);
     }
 
     @Override
-    public UserSseConnection getSession(String uniqueKey) {
-        return connectionPool.get(uniqueKey);
+    public void onCompletionCallback(UserSseConnection session) {
+        log.info("call back connection pool completion : {}", session);
+        connectionPool.remove(session.getUniqueKey());
     }
 }

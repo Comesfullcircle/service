@@ -1,13 +1,9 @@
-package org.delivery.storeadmin.domain.user.service;
+package org.delivery.storeadmin.domain.storeuser.service;
 
 import lombok.RequiredArgsConstructor;
 import org.delivery.db.storeuser.StoreUserEntity;
 import org.delivery.db.storeuser.StoreUserRepository;
 import org.delivery.db.storeuser.enums.StoreUserStatus;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +18,7 @@ public class StoreUserService {
     private final PasswordEncoder passwordEncoder;
 
     public StoreUserEntity register(
-            StoreUserEntity storeUserEntity
+        StoreUserEntity storeUserEntity
     ){
         storeUserEntity.setStatus(StoreUserStatus.REGISTERED);
         storeUserEntity.setPassword(passwordEncoder.encode(storeUserEntity.getPassword()));

@@ -8,16 +8,15 @@ import java.util.Optional;
 
 public interface UserOrderRepository extends JpaRepository<UserOrderEntity, Long> {
 
-    //UserOrderService 생성 후 -> Repository 작성 -> 서비스
-
-    //특정 유저의 모든 주문
-    //select * from user_order where user_id = ? and status = ? order by id desc
+    // 특정 유저의 모든 주문
+    // select * from user_order where user_id = ? and status = ? order by id desc
     List<UserOrderEntity> findAllByUserIdAndStatusOrderByIdDesc(Long userId, UserOrderStatus status);
 
-    //select * from user_order where user_id = ? and status in (?,? .. ) order by id desc
+
+    // select * from user_order where user_id = ? and status in (?,? .. ) order by id desc
     List<UserOrderEntity> findAllByUserIdAndStatusInOrderByIdDesc(Long userId, List<UserOrderStatus> status);
 
-    //특정 주문
+    // 특정 주문
     // select * from user_order where id = ? and status = ? and user_id = ?
     Optional<UserOrderEntity> findAllByIdAndStatusAndUserId(Long id, UserOrderStatus status, Long userId);
 

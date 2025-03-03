@@ -9,17 +9,19 @@ import java.util.Optional;
 
 public interface StoreRepository extends JpaRepository<StoreEntity, Long> {
 
-    //특정 유효한 스토어
-    //select * from store where id = ? and status = ?
+
+    // id + status
+    // select * from store where id = ? and status = ? order by id desc limit 1
     Optional<StoreEntity> findFirstByIdAndStatusOrderByIdDesc(Long id, StoreStatus status);
 
-    //유효한 스토어 리스트
-    //select * from store where status = ? order by id desc
+
+    // 유효한 스토어 리스트
+    // select * from store where status = ? order by id desc
     List<StoreEntity> findAllByStatusOrderByIdDesc(StoreStatus status);
 
-    //유효한 특정 카테고리의 스토어 리스트
-    List<StoreEntity> findAllByStatusAndCategoryOrderByStarDesc(StoreStatus status, StoreCategory category);
+    // 유효한 특정 카테고리의 스토어 리스트
+    List<StoreEntity> findAllByStatusAndCategoryOrderByStarDesc(StoreStatus status, StoreCategory storeCategory);
 
-    //select * from store where name = ? and status = ? order by id desc limit 1
+    // select * from store where name = ? and status = ? order by id desc limit 1
     Optional<StoreEntity> findFirstByNameAndStatusOrderByIdDesc(String name, StoreStatus status);
 }

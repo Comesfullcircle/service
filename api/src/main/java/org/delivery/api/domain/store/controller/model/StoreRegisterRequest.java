@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.delivery.db.store.enums.StoreCategory;
 
+
 import java.math.BigDecimal;
 
 @Data
@@ -17,10 +18,10 @@ public class StoreRegisterRequest {
     @NotBlank
     private String name;
 
-    @NotBlank // NotBlank : "", " ", null 을 막아주는 것
+    @NotBlank   // "" , " " , null
     private String address;
 
-    @NotNull // enum 으로 맵핑했기 때문에 문자로 볼 수 없어 not null
+    @NotNull
     private StoreCategory storeCategory;
 
     @NotBlank
@@ -34,4 +35,5 @@ public class StoreRegisterRequest {
 
     @NotBlank
     private String phoneNumber;
+
 }

@@ -6,5 +6,4 @@ public interface ApiExceptionIfs {
 
     ErrorCodeIfs getErrorCodeIfs();
     String getErrorDescription();
-
 }

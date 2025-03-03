@@ -12,12 +12,11 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import java.util.List;
 
-
 @Configuration
-@EnableWebSecurity  // security  활성화
+@EnableWebSecurity
 public class SecurityConfig {
 
-    private List<String> SWAGGER = List.of(
+    private static final List<String> SWAGGER = List.of(
             "/swagger-ui.html",
             "/swagger-ui/**",
             "/v3/api-docs/**"
@@ -26,39 +25,28 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
-                .csrf().disable()
-                .authorizeHttpRequests(it ->{
+                .csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/open-api/**") // ✅ CSRF 보호 제외할 API 지정
+                )
+                .authorizeHttpRequests(it -> {
                     it
                             .requestMatchers(
                                     PathRequest.toStaticResources().atCommonLocations()
-                            ).permitAll()   // resource 에 대해서는 모든 요청 허용
+                            ).permitAll()   // 정적 리소스 허용
 
-                            // swagger 는 인증 없이 통과
-                            .requestMatchers(
-                                    SWAGGER.toArray(new String[0])
-                            ).permitAll()
+                            .requestMatchers(SWAGGER.toArray(new String[0])).permitAll()  // Swagger 허용
+                            .requestMatchers("/open-api/**").permitAll()  // Open API 허용
+                            .requestMatchers("/").permitAll()  // 루트(/) 경로 허용
 
-                            // open-api / ** 하위 모든 주소는 인증 없이 통과
-                            .requestMatchers(
-                                    "/open-api/**"
-                            ).permitAll()
-
-                            // 그 외 모든 요청은 인증 사용
-                            .anyRequest().authenticated()
-                    ;
+                            .anyRequest().authenticated();  // 그 외 요청은 인증 필요
                 })
-                //.formLogin(Customizer.withDefaults())
-                .formLogin()
-                    .defaultSuccessUrl("/main", true); // 로그인 성공 후 /main으로 이동
-        ;
+                .formLogin(Customizer.withDefaults());
 
         return httpSecurity.build();
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
-        // hash 로 암호화
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
 }

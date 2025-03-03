@@ -22,13 +22,14 @@ public class UserOrderMenuService {
     }
 
     public UserOrderMenuEntity order(
-            UserOrderMenuEntity userOrderMenuEntity
+        UserOrderMenuEntity userOrderMenuEntity
     ){
         return Optional.ofNullable(userOrderMenuEntity)
-                .map( it ->{
-                    it.setStatus(UserOrderMenuStatus.REGISTERED);
-                    return userOrderMenuRepository.save(it);
-                })
-                .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
+            .map(it ->{
+                it.setStatus(UserOrderMenuStatus.REGISTERED);
+                return userOrderMenuRepository.save(it);
+            })
+            .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
     }
+
 }

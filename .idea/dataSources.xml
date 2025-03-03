@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="delivery@localhost" uuid="d06cf1b3-7621-4f93-a203-6a83981a334a">
+    <data-source source="LOCAL" name="delivery@localhost" uuid="0ff58bc0-bf12-4e50-89fe-53e23064a04e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/api/src/main/resources/application.yaml</remarks>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/delivery?useSSL=false&amp;useUnicode=true&amp;allowPublicKeyRetrieval=true</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="delivery@localhost" uuid="e3ea8f88-da68-43b7-b22a-f58183b3617a">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/store-admin/src/main/resources/application.yaml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/delivery?useSSL=false&amp;useUnicode=true&amp;allowPublicKeyRetrieval=true</jdbc-url>
       <jdbc-additional-properties>

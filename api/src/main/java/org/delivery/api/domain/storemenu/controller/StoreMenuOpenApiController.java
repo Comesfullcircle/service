@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/open-api/store-menu")
@@ -20,15 +21,10 @@ public class StoreMenuOpenApiController {
 
     @PostMapping("/register")
     public Api<StoreMenuResponse> register(
-            @Valid
-            @RequestBody Api<StoreMenuRegisterRequest> request
+        @Valid
+        @RequestBody Api<StoreMenuRegisterRequest> request
     ){
         var req = request.getBody();
-        System.out.println("storeId: " + req.getName());
-        System.out.println("storeId: " + req.getStoreId()); // 로그로 확인
-        if (req.getStoreId() == null) {
-            throw new IllegalArgumentException("storeId cannot be null");
-        }
         var response = storeMenuBusiness.register(req);
         return Api.OK(response);
     }

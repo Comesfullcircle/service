@@ -28,14 +28,14 @@ public class StoreMenuService {
 
 
     public StoreMenuEntity register(
-            StoreMenuEntity storeMenuEntity
+        StoreMenuEntity storeMenuEntity
     ){
         return Optional.ofNullable(storeMenuEntity)
-                .map(it ->{
-                    it.setStatus(StoreMenuStatus.REGISTERED);
-                    return storeMenuRepository.save(it);
-                })
-                .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
+            .map(it ->{
+                it.setStatus(StoreMenuStatus.REGISTERED);
+                return storeMenuRepository.save(it);
+            })
+            .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
 
     }
 

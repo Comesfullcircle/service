@@ -15,14 +15,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<Api<Object>> exception (
-            Exception exception
+        Exception exception
     ){
         log.error("",exception);
 
         return ResponseEntity
-                .status(500)
-                .body(
-                        Api.ERROR(ErrorCode.SERVER_ERROR)
-                );
+            .status(500)
+            .body(
+                Api.ERROR(ErrorCode.SERVER_ERROR)
+            );
     }
 }

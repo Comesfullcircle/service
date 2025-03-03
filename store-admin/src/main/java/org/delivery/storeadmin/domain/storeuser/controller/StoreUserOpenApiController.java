@@ -1,11 +1,10 @@
-package org.delivery.storeadmin.domain.user.controller;
+package org.delivery.storeadmin.domain.storeuser.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.delivery.storeadmin.domain.user.business.StoreUserBusiness;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserRegisterRequest;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserResponse;
-import org.delivery.storeadmin.domain.user.service.StoreUserService;
+import org.delivery.storeadmin.domain.storeuser.business.StoreUserBusiness;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserRegisterRequest;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,13 +17,15 @@ public class StoreUserOpenApiController {
 
     private final StoreUserBusiness storeUserBusiness;
 
-    // api꺼 가져오는건 exceptionhandler등 같이 가져와져서 가져오는거 비추
     @PostMapping("")
     public StoreUserResponse register(
-            @Valid
-            @RequestBody StoreUserRegisterRequest request
+        @Valid
+        @RequestBody StoreUserRegisterRequest request
     ){
+        System.out.println("DEBUG: 요청 데이터 - " + request); // 디버깅용 로그
         var response = storeUserBusiness.register(request);
         return response;
     }
 }
+
+

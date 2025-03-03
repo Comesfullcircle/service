@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 /**
- * token 에 대한 도메인 로직
+ * token 에 대한 도메인로직
  */
 @RequiredArgsConstructor
 @Service
@@ -32,15 +32,12 @@ public class TokenService {
     }
 
     public Long validationToken(String token){
-        var map = tokenHelperIfs.validationTokenWithTrow(token);
+        var map = tokenHelperIfs.validationTokenWithThrow(token);
+
         var userId = map.get("userId");
-
-        //Objects.requireNonNull(userId, ()-> {throw new ApiException(ErrorCode.NULL_POINT);});
-        Objects.requireNonNull(userId, () -> {
-            throw new ApiException(ErrorCode.NULL_POINT, "User ID is null in token validation");
-        });
-
+        Objects.requireNonNull(userId, ()->{throw new ApiException(ErrorCode.NULL_POINT);});
 
         return Long.parseLong(userId.toString());
     }
+
 }

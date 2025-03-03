@@ -12,7 +12,6 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
-import org.springframework.web.servlet.HandlerInterceptor;
 
 @Component
 @RequiredArgsConstructor
@@ -45,16 +44,16 @@ public class UserSessionResolver implements HandlerMethodArgumentResolver {
 
         // 사용자 정보 셋팅
         return User.builder()
-                .id(userEntity.getId())
-                .name(userEntity.getName())
-                .email(userEntity.getEmail())
-                .status(userEntity.getStatus())
-                .password(userEntity.getPassword())
-                .address(userEntity.getAddress())
-                .registeredAt(userEntity.getRegisteredAt())
-                .unregisteredAt(userEntity.getUnregisteredAt())
-                .lastLoginAt(userEntity.getLastLoginAt())
-                .build()
-                ;
+            .id(userEntity.getId())
+            .name(userEntity.getName())
+            .email(userEntity.getEmail())
+            .status(userEntity.getStatus())
+            .password(userEntity.getPassword())
+            .address(userEntity.getAddress())
+            .registeredAt(userEntity.getRegisteredAt())
+            .unregisteredAt(userEntity.getUnregisteredAt())
+            .lastLoginAt(userEntity.getLastLoginAt())
+            .build()
+            ;
     }
 }

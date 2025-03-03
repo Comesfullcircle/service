@@ -16,13 +16,22 @@ import java.math.BigDecimal;
 public class StoreResponse {
 
     private Long id;
+
     private String name;
+
     private String address;
+
     private StoreStatus status;
+
     private StoreCategory category;
+
     private double star;
-    private String thumbnailurl;
+
+    private String thumbnailUrl;
+
     private BigDecimal minimumAmount;
+
     private BigDecimal minimumDeliveryAmount;
+
     private String phoneNumber;
 }

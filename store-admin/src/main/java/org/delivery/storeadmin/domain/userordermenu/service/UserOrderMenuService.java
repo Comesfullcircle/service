@@ -1,6 +1,5 @@
 package org.delivery.storeadmin.domain.userordermenu.service;
 
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.delivery.db.userordermenu.UserOrderMenuEntity;
 import org.delivery.db.userordermenu.UserOrderMenuRepository;

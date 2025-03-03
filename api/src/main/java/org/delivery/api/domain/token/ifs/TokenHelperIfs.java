@@ -9,5 +9,6 @@ public interface TokenHelperIfs {
     TokenDto issueAccessToken(Map<String, Object> data);
     TokenDto issueRefreshToken(Map<String, Object> data);
 
-    Map<String, Object> validationTokenWithTrow(String Token);
+    Map<String, Object> validationTokenWithThrow(String token);
+
 }

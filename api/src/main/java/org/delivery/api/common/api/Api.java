@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.delivery.api.common.error.ErrorCodeIfs;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -44,7 +43,7 @@ public class Api<T> {
 
     public static Api<Object> ERROR(ErrorCodeIfs errorCodeIfs, String description){
         var api = new Api<Object>();
-        api.result = Result.ERROR(errorCodeIfs);
+        api.result = Result.ERROR(errorCodeIfs, description);
         return api;
     }
 }

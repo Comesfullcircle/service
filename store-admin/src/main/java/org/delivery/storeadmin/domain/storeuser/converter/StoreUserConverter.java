@@ -1,29 +1,39 @@
-package org.delivery.storeadmin.domain.user.converter;
+package org.delivery.storeadmin.domain.storeuser.converter;
 
 import lombok.RequiredArgsConstructor;
 import org.delivery.db.store.StoreEntity;
+import org.delivery.db.store.StoreRepository;
 import org.delivery.db.storeuser.StoreUserEntity;
 import org.delivery.storeadmin.domain.authorization.model.UserSession;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserRegisterRequest;
-import org.delivery.storeadmin.domain.user.controller.model.StoreUserResponse;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserRegisterRequest;
+import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserResponse;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
+import java.util.NoSuchElementException;
 
 @RequiredArgsConstructor
 @Service
 public class StoreUserConverter {
 
-    // Request를 Entity로 변환
-    public StoreUserEntity toEntity(StoreUserRegisterRequest request, StoreEntity storeEntity) {
+    private final StoreRepository storeRepository; // ✅ 정상적으로 주입되도록 설정 확인
+
+    public StoreUserEntity toEntity(
+            StoreUserRegisterRequest request,
+            StoreEntity storeEntity
+    ){
         return StoreUserEntity.builder()
                 .email(request.getEmail())
                 .password(request.getPassword())
                 .role(request.getRole())
-                .storeId(storeEntity.getId()) // TODO NULL 일 때 에러 체크 필요
+                .store(storeEntity) // ✅ storeEntity 직접 참조
                 .build();
     }
 
-    // Entity를 Response로 변환
-    public StoreUserResponse toResponse(StoreUserEntity storeUserEntity, StoreEntity storeEntity) {
+    public StoreUserResponse toResponse(
+            StoreUserEntity storeUserEntity,
+            StoreEntity storeEntity
+    ){
         return StoreUserResponse.builder()
                 .user(
                         StoreUserResponse.UserResponse.builder()
@@ -45,8 +55,15 @@ public class StoreUserConverter {
                 .build();
     }
 
-    // UserSession을 Response로 변환
-    public StoreUserResponse toResponse(UserSession userSession) {
+    public StoreUserResponse toResponse(UserSession userSession){
+        if (userSession.getStoreId() == null) {
+            throw new IllegalArgumentException("UserSession에 storeId가 없습니다.");
+        }
+
+        // storeId를 기반으로 StoreEntity 조회
+        StoreEntity storeEntity = storeRepository.findById(userSession.getStoreId())
+                .orElseThrow(() -> new NoSuchElementException("StoreEntity를 찾을 수 없습니다. ID: " + userSession.getStoreId()));
+
         return StoreUserResponse.builder()
                 .user(
                         StoreUserResponse.UserResponse.builder()
@@ -61,8 +78,8 @@ public class StoreUserConverter {
                 )
                 .store(
                         StoreUserResponse.StoreResponse.builder()
-                                .id(userSession.getStoreId())
-                                .name(userSession.getStoreName())
+                                .id(storeEntity.getId())  // ✅ storeEntity에서 ID 가져오기
+                                .name(storeEntity.getName())  // ✅ storeEntity에서 Name 가져오기
                                 .build()
                 )
                 .build();

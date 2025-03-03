@@ -26,22 +26,22 @@ public class TokenBusiness {
     public TokenResponse issueToken(UserEntity userEntity){
 
         return Optional.ofNullable(userEntity)
-                .map(ue -> {
-                    return ue.getId();
-                })
-                .map(userId -> {
-                    var accessToken = tokenService.issueAccessToken(userId);
-                    var refreshToken = tokenService.issueRefreshToken(userId);
-                    return tokenConverter.toResponse(accessToken, refreshToken);
-                })
-                .orElseThrow(
-                       // ()-> new ApiException(ErrorCode.NULL_POINT)
-                        () -> new ApiException(ErrorCode.NULL_POINT, "UserEntity is null")
-                );
+            .map(ue -> {
+                return ue.getId();
+            })
+            .map(userId -> {
+                var accessToken = tokenService.issueAccessToken(userId);
+                var refreshToken = tokenService.issueRefreshToken(userId);
+                return tokenConverter.toResponse(accessToken, refreshToken);
+            })
+            .orElseThrow(
+                ()-> new ApiException(ErrorCode.NULL_POINT)
+            );
     }
 
     public Long validationAccessToken(String accessToken){
         var userId = tokenService.validationToken(accessToken);
         return userId;
     }
+
 }

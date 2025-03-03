@@ -41,3 +41,4 @@ public class StoreMenuEntity extends BaseEntity {
     private int sequence;
 
 }
+
