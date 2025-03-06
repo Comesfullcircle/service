@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/*
 @RequiredArgsConstructor
 @Slf4j
 @RestController
@@ -17,3 +18,4 @@ public class HealthOpenApiController {
         log.info("health call");
     }
 }
+*/
