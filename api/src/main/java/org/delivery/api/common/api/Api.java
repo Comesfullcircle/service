@@ -4,8 +4,9 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.delivery.api.common.error.ErrorCodeIfs;
+import org.delivery.common.error.ErrorCodeIfs;
 
+/*
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -47,3 +48,4 @@ public class Api<T> {
         return api;
     }
 }
+*/
