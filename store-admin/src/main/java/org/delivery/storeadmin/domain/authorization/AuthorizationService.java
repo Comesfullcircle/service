@@ -38,8 +38,8 @@ public class AuthorizationService implements UserDetailsService {
                 .lastLoginAt(it.getLastLoginAt())
                 .unregisteredAt(it.getUnregisteredAt())
 
-                .storeId(storeEntity.get().getId())
-                .storeName(storeEntity.get().getName())
+                .storeId(storeEntity.getId())
+                .storeName(storeEntity.getName())
                 .build();
 
             return userSession;

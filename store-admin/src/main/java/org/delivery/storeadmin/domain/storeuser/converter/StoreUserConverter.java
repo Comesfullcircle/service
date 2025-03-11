@@ -7,7 +7,6 @@ import org.delivery.db.storeuser.StoreUserEntity;
 import org.delivery.storeadmin.domain.authorization.model.UserSession;
 import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserRegisterRequest;
 import org.delivery.storeadmin.domain.storeuser.controller.model.StoreUserResponse;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;

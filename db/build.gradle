@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'org.springframework.boot'
     id 'io.spring.dependency-management'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.plugin.jpa'
 }
 
 group = 'org.delivery'
@@ -43,4 +45,11 @@ bootJar {
 
 jar {
     enabled = true
+}
+
+kotlin {
+    jvmToolchain(21) // Kotlin도 Java 21 적용
+    compilerOptions {
+        freeCompilerArgs.addAll("-Xjsr305=strict") // 문자열 리터럴 문제 해결
+    }
 }

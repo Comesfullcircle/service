@@ -10,6 +10,7 @@ import org.delivery.storeadmin.domain.storeuser.service.StoreUserService;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -30,8 +31,8 @@ public class StoreUserBusiness {
         }
 
         // 2️⃣ storeName과 status로 StoreEntity 조회 (없으면 예외 발생)
-        var storeEntity = storeRepository.findFirstByNameAndStatusOrderByIdDesc(
-                        request.getStoreName(), StoreStatus.REGISTERED)
+        var storeEntity = Optional.ofNullable(storeRepository.findFirstByNameAndStatusOrderByIdDesc(
+                        request.getStoreName(), StoreStatus.REGISTERED))
                 .orElseThrow(() -> new NoSuchElementException("해당하는 매장이 없습니다: " + request.getStoreName()));
 
         // 3️⃣ 유저 등록 로직 진행
