@@ -4,4 +4,4 @@ include 'db'
 include 'store-admin'
 include 'common'
 include 'apigw'
-
+include 'account'
