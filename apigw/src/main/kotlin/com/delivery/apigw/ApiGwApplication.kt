@@ -4,9 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ApiGwApplication {
-}
+class ApigatewayApplication
 
-fun main(args: Array<String>){
-    runApplication<ApiGwApplication>(*args)
+fun main(args: Array<String>) {
+    runApplication<ApigatewayApplication>(*args)
 }

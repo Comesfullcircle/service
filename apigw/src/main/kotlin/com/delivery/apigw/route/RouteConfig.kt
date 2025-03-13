@@ -7,23 +7,22 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class RouteConfig(
+class RouteConfig (
     private val serviceApiPrivateFilter: ServiceApiPrivateFilter
 ) {
-
     @Bean
-    fun gatewayRoutes(builder: RouteLocatorBuilder): RouteLocator{
+    fun gatewayRoutes(builder: RouteLocatorBuilder): RouteLocator {
 
         return builder.routes()
             .route { spec ->
-                spec.order(-1)  // 우선순위
-                spec.path(
-                    "/service-api/api/**" // 매칭할 주소
-                ).filters { filterSpec ->
-                    filterSpec.filter(serviceApiPrivateFilter.apply(ServiceApiPrivateFilter.Config()))  // 필터 지정
+                spec.order(-1) // 최우선순위: -1
+                spec.path( // 매칭할 주소
+                    "/service-api/api/**"
+                ).filters {filterSpec -> // 필터 지정
+                    filterSpec.filter(serviceApiPrivateFilter.apply(ServiceApiPrivateFilter.Config()))
                     filterSpec.rewritePath("/service-api(?<segment>/?.*)", "\${segment}")
-                }.uri(
-                    "http://localhost:8080" // 라우팅할 주소
+                }.uri( // 라우팅할 주소
+                    "http://localhost:8080"
                 )
             }
             .build()

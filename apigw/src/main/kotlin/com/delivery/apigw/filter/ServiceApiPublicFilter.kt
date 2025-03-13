@@ -13,11 +13,10 @@ class ServiceApiPublicFilter: AbstractGatewayFilterFactory<ServiceApiPublicFilte
     class Config
 
     override fun apply(config: Config): GatewayFilter {
-
         return GatewayFilter { exchange, chain ->
             val uri = exchange.request.uri
 
-            log.info("service api public filter route uri : {}", uri)
+            log.info("service api public filter route uri: {}", uri)
 
             val mono = chain.filter(exchange)
 

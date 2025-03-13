@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/account/model/TokenDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/account/model/TokenValidationRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/account/model/TokenValidationResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/config/objectmapper/ObjectMapperConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/exceptionhandler/GlobalExceptionHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/interceptor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/interceptor/AuthorizationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/ApiGwApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/ApiGwApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/filter/ServiceApiPrivateFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/filter/ServiceApiPrivateFilter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/filter/ServiceApiPublicFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/filter/ServiceApiPublicFilter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/route/RouteConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/src/main/kotlin/com/delivery/apigw/route/RouteConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Comesfullcircle"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Comesfullcircle/service.git",
+    "accountId": "9109cb27-7df2-4628-b00f-56612b7918fc"
+  }
+}]]></component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2uFqZsaASv7TUVTD1Q2PiOCJdS1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Gradle.Build service.executor": "Run",
+    "Kotlin.ApiGwApplicationKt.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AccountApplication.executor": "Run",
+    "Spring Boot.ApiApplication.executor": "Run",
+    "Spring Boot.ApigatewayApplication.executor": "Run",
+    "Spring Boot.StoreAdminApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ApigatewayApplication">
+    <configuration name="ApiGwApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.delivery.apigw.ApiGwApplicationKt" />
+      <module name="service.apigw.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service.account.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.account.AccountApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.delivery.account.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service.api.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.api.ApiApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.delivery.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApigatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service.apigw.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.delivery.apigw.ApigatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.delivery.apigw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service.store-admin.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.storeadmin.StoreAdminApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.delivery.storeadmin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.StoreAdminApplication" />
+        <item itemvalue="Spring Boot.ApiApplication" />
+        <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Spring Boot.ApigatewayApplication" />
+        <item itemvalue="Kotlin.ApiGwApplicationKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="" />
+      <created>1741854728593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741854728593</updated>
+      <workItem from="1741854729671" duration="838000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
