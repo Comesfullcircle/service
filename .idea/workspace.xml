@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="모니터링 - ELK Stack 을 통한 Log 모니터링">
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/userorder/service/UserOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/userorder/service/UserOrderService.java" afterDir="false" />
+    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/health/HealthOpenApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/jpa/JpaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/objectmapper/ObjectMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/rabbitmq/RabbitMqConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/swagger/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/web/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/web/WebConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/web/WebConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/logback-dev.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logFile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logFile.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" afterDir="false" />
@@ -21,8 +30,33 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="service" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -53,31 +87,41 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build service.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.ApiGwApplicationKt.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AccountApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ApiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ApigatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.StoreAdminApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.mysql/docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Gradle.Build service.executor": "Run",
+    "Kotlin.ApiGwApplicationKt.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AccountApplication.executor": "Run",
+    "Spring Boot.ApiApplication.executor": "Run",
+    "Spring Boot.ApigatewayApplication.executor": "Run",
+    "Spring Boot.StoreAdminApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/seole/IdeaProjects/service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -147,10 +191,10 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="rabbitmq/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="mysql/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="rabbitmq/docker-compose.yaml" />
+          <option name="sourceFilePath" value="mysql/docker-compose.yaml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -158,10 +202,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ApiApplication" />
-        <item itemvalue="Docker.rabbitmq/docker-compose.yaml: Compose Deployment" />
-        <item itemvalue="Spring Boot.StoreAdminApplication" />
-        <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Docker.mysql/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Spring Boot.ApigatewayApplication" />
+        <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Spring Boot.StoreAdminApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +227,7 @@
       <updated>1741854728593</updated>
       <workItem from="1741854729671" duration="4580000" />
       <workItem from="1742104324457" duration="1780000" />
-      <workItem from="1742106112776" duration="5676000" />
+      <workItem from="1742106112776" duration="16680000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
@@ -201,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742114746098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)">
+      <option name="closed" value="true" />
+      <created>1742115406438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742115406438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +262,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)" />
     <MESSAGE value="모니터링 - ELK Stack 을 통한 Log 모니터링" />
-    <option name="LAST_COMMIT_MESSAGE" value="모니터링 - ELK Stack 을 통한 Log 모니터링" />
+    <MESSAGE value="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)" />
+    <option name="LAST_COMMIT_MESSAGE" value="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)" />
   </component>
 </project>

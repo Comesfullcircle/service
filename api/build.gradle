@@ -26,7 +26,16 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    set('springBootAdminVersion', "3.2.2")
+}
+
 dependencies {
+
+    //spring boot admin
+    implementation 'de.codecentric:spring-boot-admin-starter-client'
+
+
     implementation project(':db')
     implementation project(':common')
 
@@ -43,6 +52,8 @@ dependencies {
     // Spring Boot Web
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 
     // Swagger (SpringDoc)
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
@@ -62,6 +73,17 @@ dependencies {
 
     //logstash
     implementation group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '7.4'
+
+    //spring boot admin
+  //  implementation 'de.codecentric:spring-boot-admin-starter-client'
+ //   implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom("de.codecentric:spring-boot-admin-dependencies:${property("springBootAdminVersion")}")
+    }
 }
 
 tasks.named('test') {
@@ -74,6 +96,8 @@ kotlin {
         freeCompilerArgs.addAll("-Xjsr305=strict") // 문자열 리터럴 문제 해결
     }
 }
+
+
 
 bootJar {
     enabled = true

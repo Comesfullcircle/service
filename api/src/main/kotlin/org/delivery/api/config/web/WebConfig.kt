@@ -9,9 +9,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
 @Configuration
 class WebConfig(
-    private val authorationInterceptor: AuthorizationInterceptor,
+    private val authorizationInterceptor: AuthorizationInterceptor,
     private val userSessionResolver: UserSessionResolver
-) : WebMvcConfigurer {
+) : WebMvcConfigurer{
+
 
     private val OPEN_API = listOf(
         "/open-api/**"
@@ -20,7 +21,8 @@ class WebConfig(
     private val DEFAULT_EXCLUDE = listOf(
         "/",
         "favicon.ico",
-        "/error"
+        "/error",
+        "/actuator/**"
     )
 
     private val SWAGGER = listOf(
@@ -30,7 +32,7 @@ class WebConfig(
     )
 
     override fun addInterceptors(registry: InterceptorRegistry) {
-        registry.addInterceptor(authorationInterceptor)
+        registry.addInterceptor(authorizationInterceptor)
             .excludePathPatterns(OPEN_API)
             .excludePathPatterns(DEFAULT_EXCLUDE)
             .excludePathPatterns(SWAGGER)
