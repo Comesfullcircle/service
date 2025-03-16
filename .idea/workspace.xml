@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/UserOpenApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/domain/user/controller/UserOpenApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logFile.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" afterDir="false" />
     </list>
@@ -24,60 +27,60 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Comesfullcircle"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Comesfullcircle&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Comesfullcircle/service.git",
-    "accountId": "9109cb27-7df2-4628-b00f-56612b7918fc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Comesfullcircle/service.git&quot;,
+    &quot;accountId&quot;: &quot;9109cb27-7df2-4628-b00f-56612b7918fc&quot;
   }
-}]]></component>
+}</component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2uFqZsaASv7TUVTD1Q2PiOCJdS1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor": "Run",
-    "Gradle.Build service.executor": "Run",
-    "Kotlin.ApiGwApplicationKt.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AccountApplication.executor": "Run",
-    "Spring Boot.ApiApplication.executor": "Debug",
-    "Spring Boot.ApigatewayApplication.executor": "Run",
-    "Spring Boot.StoreAdminApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build service.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.ApiGwApplicationKt.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AccountApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApigatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.StoreAdminApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -89,13 +92,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ApiApplication">
-    <configuration name="ApiGwApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.delivery.apigw.ApiGwApplicationKt" />
-      <module name="service.apigw.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AccountApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service.account.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.account.AccountApplication" />
@@ -149,16 +145,26 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="rabbitmq/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="rabbitmq/docker-compose.yaml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ApiApplication" />
+        <item itemvalue="Docker.rabbitmq/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Spring Boot.StoreAdminApplication" />
         <item itemvalue="Spring Boot.AccountApplication" />
         <item itemvalue="Spring Boot.ApigatewayApplication" />
-        <item itemvalue="Kotlin.ApiGwApplicationKt" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +185,8 @@
       <option name="presentableId" value="Default" />
       <updated>1741854728593</updated>
       <workItem from="1741854729671" duration="4580000" />
+      <workItem from="1742104324457" duration="1780000" />
+      <workItem from="1742106112776" duration="4886000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
