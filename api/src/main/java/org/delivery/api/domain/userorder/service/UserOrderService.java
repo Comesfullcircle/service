@@ -1,6 +1,7 @@
 package org.delivery.api.domain.userorder.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.delivery.common.error.ErrorCode;
 import org.delivery.common.exception.ApiException;
 import org.delivery.db.userorder.UserOrderEntity;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @RequiredArgsConstructor
 @Service
 public class UserOrderService {
@@ -22,6 +24,8 @@ public class UserOrderService {
         Long id,
         Long userId
     ){
+
+        log.info("userId: {}", id);
         return Optional.ofNullable(userOrderRepository.findAllByIdAndUserId(id, userId))
             .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
     }
