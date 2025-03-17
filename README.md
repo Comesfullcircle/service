@@ -64,3 +64,4 @@
 ## 🌍각 기능을 학습하고 정리한 블로그 URL
 https://velog.io/@olerlmin/RabbitMQ-SSE-%EC%A0%95%EB%A6%AC
 https://velog.io/@olerlmin/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4MSA
+https://velog.io/@olerlmin/%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81-f1ly2mwk
