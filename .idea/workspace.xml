@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)">
+    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)">
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/filter/LoggerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/filter/LoggerFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logFile.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.2025-03-14_21_32.log.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.2025-03-15_11_57.log.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_15_08.log165780670807083.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_15_12.log166020736315458.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_17_22.log.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_17_23.log.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" afterDir="false" />
     </list>
@@ -219,7 +224,7 @@
       <updated>1741854728593</updated>
       <workItem from="1741854729671" duration="4580000" />
       <workItem from="1742104324457" duration="1780000" />
-      <workItem from="1742106112776" duration="19941000" />
+      <workItem from="1742106112776" duration="20584000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
@@ -253,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742137117577</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)">
+      <option name="closed" value="true" />
+      <created>1742175400448</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742175400448</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +277,7 @@
     <MESSAGE value="모니터링 - ELK Stack 을 통한 Log 모니터링" />
     <MESSAGE value="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)" />
     <MESSAGE value="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)" />
-    <option name="LAST_COMMIT_MESSAGE" value="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)" />
+    <MESSAGE value="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)" />
+    <option name="LAST_COMMIT_MESSAGE" value="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)" />
   </component>
 </project>
