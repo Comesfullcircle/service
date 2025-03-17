@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)">
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/health/HealthOpenApiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/jpa/JpaConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/objectmapper/ObjectMapperConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/rabbitmq/RabbitMqConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/swagger/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/config/web/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/web/WebConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/web/WebConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/filter/LoggerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/delivery/api/filter/LoggerFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/logback-dev.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logFile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logFile.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" afterDir="false" />
@@ -227,7 +219,7 @@
       <updated>1741854728593</updated>
       <workItem from="1741854729671" duration="4580000" />
       <workItem from="1742104324457" duration="1780000" />
-      <workItem from="1742106112776" duration="16680000" />
+      <workItem from="1742106112776" duration="19941000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
@@ -253,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742115406438</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)">
+      <option name="closed" value="true" />
+      <created>1742137117577</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742137117577</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +263,7 @@
     <MESSAGE value="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)" />
     <MESSAGE value="모니터링 - ELK Stack 을 통한 Log 모니터링" />
     <MESSAGE value="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)" />
-    <option name="LAST_COMMIT_MESSAGE" value="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)" />
+    <MESSAGE value="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)" />
+    <option name="LAST_COMMIT_MESSAGE" value="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)" />
   </component>
 </project>
