@@ -45,18 +45,17 @@
 - **RabbitMQ**를 활용한 주문/배달 이벤트 메시징 처리
 - **Spring Security + JWT**를 통한 인증 및 보안 강화
 - **JPA (Spring Data JPA) + MySQL**을 활용한 안정적인 데이터 관리
-- **SSE (Server-Sent Events)**를 활용한 실시간 주문 상태 업데이트
-- **CI/CD (GitHub Actions + Docker)**로 자동 배포 지원
+- SSE (Server-Sent Events)를 활용한 실시간 주문 상태 업데이트
 
 ### 🖥 **기술 스택**
 | 분야 | 기술 |
 |------|------|
-| **백엔드** | Java 17, Spring Boot 3, Spring Security, JPA (Hibernate), RabbitMQ |
+| **백엔드** | Java 17, Spring Boot 3, Spring Security, JPA (Hibernate), Kotlin, RabbitMQ |
 | **데이터베이스** | MySQL 8, Redis (세션 관리) |
 | **메시징** | RabbitMQ |
-| **CI/CD** | Docker, GitHub Actions |
+| **CI/CD** | Docker, GitHub Actions(수정중) |
 | **API 문서화** | Swagger (SpringDoc) |
-| **프론트엔드** | Vue.js |
+| **프론트엔드** | Thymeleaf|
 
 ---
 
