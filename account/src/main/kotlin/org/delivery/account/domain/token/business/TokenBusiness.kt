@@ -17,4 +17,8 @@ class TokenBusiness(
             userId = result
         )
     }
+
+    fun logout(userId: Long) {
+        tokenService.logout(userId)
+    }
 }

@@ -4,7 +4,9 @@ import org.delivery.account.common.Log
 import org.delivery.account.domain.token.business.TokenBusiness
 import org.delivery.account.domain.token.controller.model.TokenValidationRequest
 import org.delivery.account.domain.token.controller.model.TokenValidationResponse
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -24,6 +26,13 @@ class TokenInternalApiController(
     ): TokenValidationResponse {
         log.info("token validation init : {}", tokenValidationRequest)
         return tokenBusiness.tokenValidation(tokenValidationRequest)
+    }
+
+    @PostMapping("/logout")
+    fun logout(@RequestParam userId: Long): ResponseEntity<Void> {
+        log.info("logout request: userId = {}", userId)
+        tokenBusiness.logout(userId)
+        return ResponseEntity.ok().build()
     }
 
 }
