@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="기존 로그파일 제거">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="환결설정 수정">
+      <change afterPath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/config/redis/RedisConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/account/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/redis">
       <ProjectState />
     </projectState>
   </component>
@@ -41,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -118,6 +122,7 @@
     "Docker.mysql/docker-compose.yaml: Compose Deployment.executor": "Run",
     "Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor": "Run",
     "Docker.rabbitmq/docker-compose.yaml: Compose 배포.executor": "Run",
+    "Docker.redis/docker-compose.yaml: Compose 배포.executor": "Run",
     "Gradle.Build service.executor": "Run",
     "Gradle.service 빌드.executor": "Run",
     "Kotlin.ApiGwApplicationKt.executor": "Run",
@@ -134,7 +139,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/seole/IdeaProjects/service",
+    "last_opened_file_path": "/Users/seole/IdeaProjects/service/redis",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,6 +149,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -154,6 +160,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/redis" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -167,7 +174,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.StoreAdminApplication">
+  <component name="RunManager" selected="Spring Boot.AccountApplication">
     <configuration name="AccountApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service.account.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.account.AccountApplication" />
@@ -207,6 +214,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="redis.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.seol.redis.RedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StoreAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service.store-admin.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.storeadmin.StoreAdminApplication" />
@@ -226,21 +240,21 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="mysql/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="redis/docker-compose.yaml: Compose 배포" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="mysql/docker-compose.yaml" />
+          <option name="sourceFilePath" value="redis/docker-compose.yaml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Docker.redis/docker-compose.yaml: Compose 배포" />
         <item itemvalue="Spring Boot.StoreAdminApplication" />
         <item itemvalue="Spring Boot.ApigatewayApplication" />
         <item itemvalue="Spring Boot.ApiApplication" />
-        <item itemvalue="Spring Boot.AccountApplication" />
-        <item itemvalue="Docker.mysql/docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +280,10 @@
       <workItem from="1742184498671" duration="4223000" />
       <workItem from="1745933061118" duration="2605000" />
       <workItem from="1747097135906" duration="5326000" />
-      <workItem from="1747110463566" duration="2213000" />
+      <workItem from="1747110463566" duration="4088000" />
+      <workItem from="1747132493416" duration="3282000" />
+      <workItem from="1747141703044" duration="6872000" />
+      <workItem from="1747151364222" duration="1331000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
@@ -316,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742176007146</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="환결설정 수정">
+      <option name="closed" value="true" />
+      <created>1747113192083</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747113192083</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +354,7 @@
     <MESSAGE value="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)" />
     <MESSAGE value="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)" />
     <MESSAGE value="기존 로그파일 제거" />
-    <option name="LAST_COMMIT_MESSAGE" value="기존 로그파일 제거" />
+    <MESSAGE value="환결설정 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="환결설정 수정" />
   </component>
 </project>
