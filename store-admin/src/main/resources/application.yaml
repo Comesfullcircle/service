@@ -9,7 +9,7 @@ spring:
     host: localhost
     port: 5672
     username: admin
-    password:
+    password: admin123!@#
 
   jpa:
     show-sql: true
@@ -22,4 +22,4 @@ spring:
     url: jdbc:mysql://localhost:3306/delivery?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password:
+    password: qlqjs123

@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)">
-      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
+    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="기존 로그파일 제거">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.2025-03-14_21_32.log.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.2025-03-15_11_57.log.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_15_08.log165780670807083.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_15_12.log166020736315458.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_17_22.log.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.2025-03-16_17_23.log.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFile.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yaml" afterDir="false" />
     </list>
@@ -52,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -61,6 +60,35 @@
     &quot;assignee&quot;: &quot;Comesfullcircle&quot;
   }
 }</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1747112839" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1747112813" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1747097176" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Comesfullcircle/service.git&quot;,
@@ -86,20 +114,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker/docker-compose-mysql.yml: Compose 배포.executor": "Run",
     "Docker.mysql/docker-compose.yaml: Compose Deployment.executor": "Run",
     "Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Docker.rabbitmq/docker-compose.yaml: Compose 배포.executor": "Run",
     "Gradle.Build service.executor": "Run",
+    "Gradle.service 빌드.executor": "Run",
     "Kotlin.ApiGwApplicationKt.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AccountApplication.executor": "Run",
     "Spring Boot.ApiApplication.executor": "Run",
     "Spring Boot.ApigatewayApplication.executor": "Run",
     "Spring Boot.StoreAdminApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/seole/IdeaProjects/service",
     "node.js.detected.package.eslint": "true",
@@ -107,11 +140,16 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "모듈",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -129,7 +167,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiApplication">
+  <component name="RunManager" selected="Spring Boot.StoreAdminApplication">
     <configuration name="AccountApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service.account.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.account.AccountApplication" />
@@ -198,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ApiApplication" />
-        <item itemvalue="Docker.mysql/docker-compose.yaml: Compose Deployment" />
-        <item itemvalue="Spring Boot.ApigatewayApplication" />
-        <item itemvalue="Spring Boot.AccountApplication" />
         <item itemvalue="Spring Boot.StoreAdminApplication" />
+        <item itemvalue="Spring Boot.ApigatewayApplication" />
+        <item itemvalue="Spring Boot.ApiApplication" />
+        <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Docker.mysql/docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +262,11 @@
       <updated>1741854728593</updated>
       <workItem from="1741854729671" duration="4580000" />
       <workItem from="1742104324457" duration="1780000" />
-      <workItem from="1742106112776" duration="20584000" />
+      <workItem from="1742106112776" duration="23483000" />
+      <workItem from="1742184498671" duration="4223000" />
+      <workItem from="1745933061118" duration="2605000" />
+      <workItem from="1747097135906" duration="5326000" />
+      <workItem from="1747110463566" duration="2213000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
@@ -266,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742175400448</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="기존 로그파일 제거">
+      <option name="closed" value="true" />
+      <created>1742176007146</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742176007146</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +328,7 @@
     <MESSAGE value="모니터링 - ELK Stack 을 통한 Log 모니터링(UserService 로그로 유저 아이디 확인)" />
     <MESSAGE value="모니터링 - Spring Boot Application 활용(OFFLINE에러 확인 하구 수정 ing)" />
     <MESSAGE value="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)" />
-    <option name="LAST_COMMIT_MESSAGE" value="모니터링 - Prometheus Grafana 활용(그에 맞는 gradle dependency 및 설정 변경)" />
+    <MESSAGE value="기존 로그파일 제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="기존 로그파일 제거" />
   </component>
 </project>

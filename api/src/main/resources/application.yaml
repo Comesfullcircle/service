@@ -1,27 +1,68 @@
+server:
+  name: delivery-api
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # ✅ Prometheus와 Health만 포함  "prometheus, health"
+  endpoint:
+    prometheus:
+      enabled: true
+    health:
+      show-details: ALWAYS
+  metrics:
+    export:
+      prometheus:
+        enabled: true  # ✅ Prometheus 메트릭 내보내기 활성화
+      statsd:
+        enabled: true
+        flavor: telegraf
+        polling-frequency: 5s
+        host: localhost
+        port: 8125
+
+
 spring:
+  application:
+    name: delivery-api  # Logback에서 사용하기 위한 Spring 공식 속성
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8085
+        instance:
+          prefer-ip-address: false  # ✅ 내부 도메인 사용 (IP 대신 `localhost`를 사용)
+
   rabbitmq:
     host: localhost
     port: 5672
     username: admin
-    password:
+    password: admin123!@#
 
   jpa:
     show-sql: true
     properties:
-      format_sql: true
-      dialect: org.hibernate.dialect.MySQL8Dialect
+      hibernate.format_sql: true
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
   datasource:
     url: jdbc:mysql://localhost:3306/delivery?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password:
+    password: qlqjs123
 
 token:
   secret:
-    key:
+    key: SpringBootJWTHelperTokenSecretKeyValue123!@#
   access-token:
     plus-hour: 1
   refresh-token:
     plus-hour: 12
+
+logging:
+  config: classpath:logback-dev.xml
+  file:
+    name: logFile.log
