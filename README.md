@@ -47,6 +47,7 @@
 
 
 ## 🏗️ 아키텍처 설계
+![아키텍처](https://github.com/user-attachments/assets/1dbc5de7-7e56-4581-9e6c-7cd846f8baaf)
 
 
 ## 🖋️erd
