@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="환결설정 수정">
-      <change afterPath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/config/redis/RedisConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/domain/token/redis/RedisTokenStore.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/account/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/domain/token/service/TokenService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/domain/token/service/TokenService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,48 +115,50 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker/docker-compose-mysql.yml: Compose 배포.executor": "Run",
-    "Docker.mysql/docker-compose.yaml: Compose Deployment.executor": "Run",
-    "Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor": "Run",
-    "Docker.rabbitmq/docker-compose.yaml: Compose 배포.executor": "Run",
-    "Docker.redis/docker-compose.yaml: Compose 배포.executor": "Run",
-    "Gradle.Build service.executor": "Run",
-    "Gradle.service 빌드.executor": "Run",
-    "Kotlin.ApiGwApplicationKt.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AccountApplication.executor": "Run",
-    "Spring Boot.ApiApplication.executor": "Run",
-    "Spring Boot.ApigatewayApplication.executor": "Run",
-    "Spring Boot.StoreAdminApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/seole/IdeaProjects/service/redis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker/docker-compose-mysql.yml: Compose 배포.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.mysql/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.rabbitmq/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.rabbitmq/docker-compose.yaml: Compose 배포.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.redis/docker-compose.yaml: Compose 배포.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build service.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.redis 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.service 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.ApiGwApplicationKt.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AccountApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApigatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RedisApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.StoreAdminApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21 (2)&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/seole/IdeaProjects/service/redis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/redis" />
@@ -214,13 +215,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="redis.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.seol.redis.RedisApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StoreAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="service.store-admin.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.delivery.storeadmin.StoreAdminApplication" />
@@ -251,10 +245,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Spring Boot.ApiApplication" />
         <item itemvalue="Docker.redis/docker-compose.yaml: Compose 배포" />
         <item itemvalue="Spring Boot.StoreAdminApplication" />
         <item itemvalue="Spring Boot.ApigatewayApplication" />
-        <item itemvalue="Spring Boot.ApiApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -284,6 +278,9 @@
       <workItem from="1747132493416" duration="3282000" />
       <workItem from="1747141703044" duration="6872000" />
       <workItem from="1747151364222" duration="1331000" />
+      <workItem from="1747153991334" duration="83000" />
+      <workItem from="1747154076657" duration="16000" />
+      <workItem from="1747154094663" duration="1520000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
