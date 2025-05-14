@@ -41,12 +41,13 @@
 - 주문 상태에 따른 흐름 및 실시간 알림 로직을 중심으로 도메인 설계 (User, UserOrder, Store 등)
 - 주문 상태에 따라 실시간 알림을 전송하기 위한 SSE 연결 기능 구현 
 - 로그인과 인증을 위해 JWT 토큰 기반 인증 로직 적용, Refresh Token은 Redis를 통해 관리
-- 주문 처리 과정에서 필요한 데이터는 Redis에 임시 저장하고, 일정 시간이 지나면 자동 만료되도록 TTL 설정 적용
 - 주문 완료 후 메시지를 비동기적으로 다른 서비스에 전달하기 위해 RabbitMQ 연동 및 프로듀서/컨슈머 구성
 - 클라이언트 요청을 각 서비스로 라우팅하고 인증 처리도 할 수 있도록 API Gateway 설정
+- Spring log를 ELK Stack을 활용하여 실시간 모니터링을 구축함
 
 
 ## 🏗️ 아키텍처 설계
+![아키텍처](https://github.com/user-attachments/assets/1dbc5de7-7e56-4581-9e6c-7cd846f8baaf)
 
 
 ## 🖋️erd
@@ -54,7 +55,7 @@
 
 
 ### 🔹 **아키텍처 개요**
-- **MSA 기반**으로 `API`, `Store-Admin`, `DB`, `Common` 모듈로 구성
+- **MSA 기반**으로 `API`, `Store-Admin`,`Account` , `DB`, `Common` 모듈로 구성
 - **RabbitMQ**를 활용한 주문/배달 이벤트 메시징 처리
 - **Spring Security + JWT**를 통한 인증 및 보안 강화
 - **JPA (Spring Data JPA) + MySQL**을 활용한 안정적인 데이터 관리
