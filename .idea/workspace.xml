@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="토큰 Redis 설정 추가">
-      <change beforePath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/domain/token/business/TokenBusiness.kt" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/domain/token/business/TokenBusiness.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/domain/token/controller/TokenInternalApiController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/kotlin/org/delivery/account/domain/token/controller/TokenInternalApiController.kt" afterDir="false" />
+    <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="로그아웃 시 Redis에 저장된 Refresh Token을 삭제함으로써,&#10;해당 사용자의 토큰 재발급을 차단할 수 있도록 구성 &#10;- 무상태 JWT 구조에 Redis를 얹어서 서버 측에서 토큰 무효화를 제어한 케이스">
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +277,7 @@
       <workItem from="1747151364222" duration="1331000" />
       <workItem from="1747153991334" duration="83000" />
       <workItem from="1747154076657" duration="16000" />
-      <workItem from="1747154094663" duration="2117000" />
+      <workItem from="1747154094663" duration="6140000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />
@@ -344,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747155633775</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="로그아웃 시 Redis에 저장된 Refresh Token을 삭제함으로써,&#10;해당 사용자의 토큰 재발급을 차단할 수 있도록 구성 &#10;- 무상태 JWT 구조에 Redis를 얹어서 서버 측에서 토큰 무효화를 제어한 케이스">
+      <option name="closed" value="true" />
+      <created>1747156239491</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747156239491</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +366,7 @@
     <MESSAGE value="기존 로그파일 제거" />
     <MESSAGE value="환결설정 수정" />
     <MESSAGE value="토큰 Redis 설정 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="토큰 Redis 설정 추가" />
+    <MESSAGE value="로그아웃 시 Redis에 저장된 Refresh Token을 삭제함으로써,&#10;해당 사용자의 토큰 재발급을 차단할 수 있도록 구성 &#10;- 무상태 JWT 구조에 Redis를 얹어서 서버 측에서 토큰 무효화를 제어한 케이스" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그아웃 시 Redis에 저장된 Refresh Token을 삭제함으로써,&#10;해당 사용자의 토큰 재발급을 차단할 수 있도록 구성 &#10;- 무상태 JWT 구조에 Redis를 얹어서 서버 측에서 토큰 무효화를 제어한 케이스" />
   </component>
 </project>
