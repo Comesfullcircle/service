@@ -55,7 +55,7 @@
 
 
 ### 🔹 **아키텍처 개요**
-- **MSA 기반**으로 `API`, `Store-Admin`, `DB`, `Common` 모듈로 구성
+- **MSA 기반**으로 `API`, `Store-Admin`,`Account` , `DB`, `Common` 모듈로 구성
 - **RabbitMQ**를 활용한 주문/배달 이벤트 메시징 처리
 - **Spring Security + JWT**를 통한 인증 및 보안 강화
 - **JPA (Spring Data JPA) + MySQL**을 활용한 안정적인 데이터 관리
