@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de2aed3a-6bfc-4426-a687-c3cdc5a0a5ac" name="Changes" comment="로그아웃 시 Redis에 저장된 Refresh Token을 삭제함으로써,&#10;해당 사용자의 토큰 재발급을 차단할 수 있도록 구성 &#10;- 무상태 JWT 구조에 Redis를 얹어서 서버 측에서 토큰 무효화를 제어한 케이스">
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/rabbitmq/RabbitMqConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/kotlin/org/delivery/api/config/rabbitmq/RabbitMqConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/rabbitmq/RabbitMqConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/config/rabbitmq/RabbitMqConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/userorder/consumer/UserOrderConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/org/delivery/storeadmin/domain/userorder/consumer/UserOrderConsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,6 +281,7 @@
       <workItem from="1747153991334" duration="83000" />
       <workItem from="1747154076657" duration="16000" />
       <workItem from="1747154094663" duration="6140000" />
+      <workItem from="1747182316058" duration="2902000" />
     </task>
     <task id="LOCAL-00001" summary="마이크로서비스-API GateWay 추가( apigw 모듈, 그에 맞는 버전 수정)">
       <option name="closed" value="true" />

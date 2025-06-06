@@ -5,6 +5,7 @@ import org.springframework.amqp.core.Binding
 import org.springframework.amqp.core.BindingBuilder
 import org.springframework.amqp.core.DirectExchange
 import org.springframework.amqp.core.Queue
+import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory
 import org.springframework.amqp.rabbit.connection.ConnectionFactory
 import org.springframework.amqp.rabbit.core.RabbitTemplate
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter
@@ -12,6 +13,7 @@ import org.springframework.amqp.support.converter.MessageConverter
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.amqp.core.AcknowledgeMode
 
 @Configuration
 class RabbitMqConfig(@Qualifier("objectMapper") private val objectMapper: ObjectMapper) {
@@ -59,4 +61,15 @@ class RabbitMqConfig(@Qualifier("objectMapper") private val objectMapper: Object
     ): MessageConverter{
         return Jackson2JsonMessageConverter(objectMapper)
     }
+
+    //수동 ack 설정 포함한 리스너 팩토리 추가
+        @Bean
+        fun rabbitListenerContainerFactory(
+            connectionFactory: ConnectionFactory
+        ): SimpleRabbitListenerContainerFactory {
+            return SimpleRabbitListenerContainerFactory().apply {
+                setConnectionFactory(connectionFactory)
+                setAcknowledgeMode(AcknowledgeMode.MANUAL) // 수동 ack
+            }
+        }
 }
